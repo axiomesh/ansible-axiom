@@ -1,0 +1,18 @@
+- name: check axiom process
+  hosts: test1
+  tasks:
+    - name: "复制检查脚本到目标服务器上"
+      copy:
+        src: "./files/check_process.sh" #文件或文件夹
+        dest: "~/ansible/" #文件夹
+        owner: hyperchain
+        group: hyperchain
+        mode: 777
+
+    - name: "在服务器上执行脚本"
+      shell: bash ~/ansible/check_process.sh
+    #  register: result
+
+    #- name: Display result
+    #  debug:
+    #    var: result

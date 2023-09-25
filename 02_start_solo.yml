@@ -1,0 +1,23 @@
+- name: check axiom process
+  hosts: test1
+  tasks:
+    - name: "复制启动脚本到目标服务器上"
+      copy:
+        src: "{{ item }}" #文件或文件夹
+        dest: "~/ansible/" #文件夹
+        owner: hyperchain
+        group: hyperchain
+        mode: 777
+      with_items:
+        - "files/control_solo.sh"
+
+    - name: "在服务器上执行脚本"
+      shell:
+        cmd: |
+          bash control_solo.sh start
+        chdir: ~/ansible
+      register: result
+
+    - name: Display result
+      debug:
+        var: result

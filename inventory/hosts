@@ -1,0 +1,10 @@
+[test1]
+172.16.13.132
+
+[test1:vars]
+ansible_ssh_user="hyperchain"
+ansible_ssh_pass="hyperchain"
+ansible_ssh_port=22
+
+[localhost]
+127.0.0.1

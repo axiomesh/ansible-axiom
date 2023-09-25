@@ -1,0 +1,475 @@
+2023-09-21 16:42:18,177 p=23606 u=leixiaochen n=ansible | 172.16.13.132 | CHANGED | rc=0 >>
+总用量 154288
+drwxrwxr-x.  3 hyperchain hyperchain        18 9月   1 16:02 axiom
+drwxrwxr-x.  3 hyperchain hyperchain        32 6月  13 17:08 bxm
+drwxrwxr-x.  9 hyperchain hyperchain       192 8月  28 10:42 code
+drwxr-xr-x.  5 hyperchain hyperchain        65 8月  29 18:02 data
+-rwxrwxr-x.  1 hyperchain hyperchain      1942 7月  25 11:09 foundryup_install.sh
+drwxrwxr-x.  4 hyperchain hyperchain        28 6月  27 2022 go
+drwxrwxr-x.  2 hyperchain hyperchain        24 11月  2 2022 imageData
+-rw-rw-r--.  1 hyperchain hyperchain       743 4月   4 13:31 lrx.pub
+-rwxr-xr-x.  1 hyperchain hyperchain 157975408 6月   5 13:53 mongosh
+-rwxrwxr-x.  1 hyperchain hyperchain       638 7月  14 17:20 pyenv_install.sh
+drwxrwxr-x.  2 hyperchain hyperchain        89 9月   7 11:45 remoteLogs
+drwxrwxr-x.  5 hyperchain hyperchain       120 6月   5 13:36 temp
+drwxr-xr-x.  3 hyperchain hyperchain       280 8月  31 11:11 test_env
+drwxrwxr-x.  2 hyperchain hyperchain         6 8月  27 16:12 uniswap
+drwxrwxr-x. 12 hyperchain hyperchain       196 8月  11 16:17 work
+
+2023-09-21 16:43:06,779 p=23799 u=leixiaochen n=ansible | 172.16.13.132 | CHANGED | rc=0 >>
+总用量 154288
+drwxrwxr-x.  3 hyperchain hyperchain        18 9月   1 16:02 axiom
+drwxrwxr-x.  3 hyperchain hyperchain        32 6月  13 17:08 bxm
+drwxrwxr-x.  9 hyperchain hyperchain       192 8月  28 10:42 code
+drwxr-xr-x.  5 hyperchain hyperchain        65 8月  29 18:02 data
+-rwxrwxr-x.  1 hyperchain hyperchain      1942 7月  25 11:09 foundryup_install.sh
+drwxrwxr-x.  4 hyperchain hyperchain        28 6月  27 2022 go
+drwxrwxr-x.  2 hyperchain hyperchain        24 11月  2 2022 imageData
+-rw-rw-r--.  1 hyperchain hyperchain       743 4月   4 13:31 lrx.pub
+-rwxr-xr-x.  1 hyperchain hyperchain 157975408 6月   5 13:53 mongosh
+-rwxrwxr-x.  1 hyperchain hyperchain       638 7月  14 17:20 pyenv_install.sh
+drwxrwxr-x.  2 hyperchain hyperchain        89 9月   7 11:45 remoteLogs
+drwxrwxr-x.  5 hyperchain hyperchain       120 6月   5 13:36 temp
+drwxr-xr-x.  3 hyperchain hyperchain       280 8月  31 11:11 test_env
+drwxrwxr-x.  2 hyperchain hyperchain         6 8月  27 16:12 uniswap
+drwxrwxr-x. 12 hyperchain hyperchain       196 8月  11 16:17 work
+
+2023-09-21 16:50:47,270 p=25207 u=leixiaochen n=ansible | @all:
+  |--@ungrouped:
+  |--@test1:
+  |  |--172.16.13.132
+  |--@localhost:
+  |  |--127.0.0.1
+2023-09-21 16:51:08,231 p=25316 u=leixiaochen n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: version
+
+2023-09-21 16:51:08,231 p=25316 u=leixiaochen n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2023-09-21 16:51:08,234 p=25316 u=leixiaochen n=ansible | ERROR! No argument passed to command module
+2023-09-21 16:55:20,589 p=26117 u=leixiaochen n=ansible | PLAY [Execute a shell command] *******************************************************************************************************************
+2023-09-21 16:55:20,603 p=26117 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-21 16:55:22,904 p=26117 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-21 16:55:22,938 p=26117 u=leixiaochen n=ansible | TASK [Run shell command] *************************************************************************************************************************
+2023-09-21 16:55:23,708 p=26117 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-21 16:55:23,729 p=26117 u=leixiaochen n=ansible | TASK [Display result] ****************************************************************************************************************************
+2023-09-21 16:55:23,760 p=26117 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "ls -l ~/",
+        "delta": "0:00:00.007615",
+        "end": "2023-09-21 16:55:18.999143",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-21 16:55:18.991528",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "总用量 154288\ndrwxrwxr-x.  3 hyperchain hyperchain        18 9月   1 16:02 axiom\ndrwxrwxr-x.  3 hyperchain hyperchain        32 6月  13 17:08 bxm\ndrwxrwxr-x.  9 hyperchain hyperchain       192 8月  28 10:42 code\ndrwxr-xr-x.  5 hyperchain hyperchain        65 8月  29 18:02 data\n-rwxrwxr-x.  1 hyperchain hyperchain      1942 7月  25 11:09 foundryup_install.sh\ndrwxrwxr-x.  4 hyperchain hyperchain        28 6月  27 2022 go\ndrwxrwxr-x.  2 hyperchain hyperchain        24 11月  2 2022 imageData\n-rw-rw-r--.  1 hyperchain hyperchain       743 4月   4 13:31 lrx.pub\n-rwxr-xr-x.  1 hyperchain hyperchain 157975408 6月   5 13:53 mongosh\n-rwxrwxr-x.  1 hyperchain hyperchain       638 7月  14 17:20 pyenv_install.sh\ndrwxrwxr-x.  2 hyperchain hyperchain        89 9月   7 11:45 remoteLogs\ndrwxrwxr-x.  5 hyperchain hyperchain       120 6月   5 13:36 temp\ndrwxr-xr-x.  3 hyperchain hyperchain       280 8月  31 11:11 test_env\ndrwxrwxr-x.  2 hyperchain hyperchain         6 8月  27 16:12 uniswap\ndrwxrwxr-x. 12 hyperchain hyperchain       196 8月  11 16:17 work",
+        "stdout_lines": [
+            "总用量 154288",
+            "drwxrwxr-x.  3 hyperchain hyperchain        18 9月   1 16:02 axiom",
+            "drwxrwxr-x.  3 hyperchain hyperchain        32 6月  13 17:08 bxm",
+            "drwxrwxr-x.  9 hyperchain hyperchain       192 8月  28 10:42 code",
+            "drwxr-xr-x.  5 hyperchain hyperchain        65 8月  29 18:02 data",
+            "-rwxrwxr-x.  1 hyperchain hyperchain      1942 7月  25 11:09 foundryup_install.sh",
+            "drwxrwxr-x.  4 hyperchain hyperchain        28 6月  27 2022 go",
+            "drwxrwxr-x.  2 hyperchain hyperchain        24 11月  2 2022 imageData",
+            "-rw-rw-r--.  1 hyperchain hyperchain       743 4月   4 13:31 lrx.pub",
+            "-rwxr-xr-x.  1 hyperchain hyperchain 157975408 6月   5 13:53 mongosh",
+            "-rwxrwxr-x.  1 hyperchain hyperchain       638 7月  14 17:20 pyenv_install.sh",
+            "drwxrwxr-x.  2 hyperchain hyperchain        89 9月   7 11:45 remoteLogs",
+            "drwxrwxr-x.  5 hyperchain hyperchain       120 6月   5 13:36 temp",
+            "drwxr-xr-x.  3 hyperchain hyperchain       280 8月  31 11:11 test_env",
+            "drwxrwxr-x.  2 hyperchain hyperchain         6 8月  27 16:12 uniswap",
+            "drwxrwxr-x. 12 hyperchain hyperchain       196 8月  11 16:17 work"
+        ]
+    }
+}
+2023-09-21 16:55:23,805 p=26117 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-21 16:55:23,806 p=26117 u=leixiaochen n=ansible | 172.16.13.132              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-21 17:31:32,644 p=32647 u=leixiaochen n=ansible | PLAY [Execute a shell command example] ***********************************************************************************************************
+2023-09-21 17:31:32,660 p=32647 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-21 17:31:32,811 p=32647 u=leixiaochen n=ansible |  [ERROR]: User interrupted execution
+
+2023-09-21 17:31:37,988 p=32699 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-21 17:31:38,000 p=32699 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-21 17:31:40,084 p=32699 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-21 17:31:40,122 p=32699 u=leixiaochen n=ansible | TASK [复制脚本到目标服务器上] ********************************************************************************************************************
+2023-09-21 17:31:41,285 p=32699 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-21 17:31:41,299 p=32699 u=leixiaochen n=ansible | TASK [复制脚本到目标服务器上] ********************************************************************************************************************
+2023-09-21 17:31:41,911 p=32699 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-21 17:31:41,928 p=32699 u=leixiaochen n=ansible | TASK [Display result] ****************************************************************************************************************************
+2023-09-21 17:31:41,961 p=32699 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "ls -l ~/ansible",
+        "delta": "0:00:00.006755",
+        "end": "2023-09-21 17:31:37.229574",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-21 17:31:37.222819",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "总用量 4\n--wxrw--wt. 1 hyperchain hyperchain 276 9月  21 17:31 check_process.sh",
+        "stdout_lines": [
+            "总用量 4",
+            "--wxrw--wt. 1 hyperchain hyperchain 276 9月  21 17:31 check_process.sh"
+        ]
+    }
+}
+2023-09-21 17:31:42,023 p=32699 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-21 17:31:42,024 p=32699 u=leixiaochen n=ansible | 172.16.13.132              : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-21 17:33:02,050 p=33057 u=leixiaochen n=ansible | PLAY [check axiom process] **************************************************************************
+2023-09-21 17:33:02,064 p=33057 u=leixiaochen n=ansible | TASK [Gathering Facts] ******************************************************************************
+2023-09-21 17:33:05,510 p=33057 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-21 17:33:05,547 p=33057 u=leixiaochen n=ansible | TASK [复制脚本到目标服务器上] ***********************************************************************
+2023-09-21 17:33:06,956 p=33057 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-21 17:33:06,974 p=33057 u=leixiaochen n=ansible | TASK [复制脚本到目标服务器上] ***********************************************************************
+2023-09-21 17:33:07,691 p=33057 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-21 17:33:07,707 p=33057 u=leixiaochen n=ansible | TASK [Display result] *******************************************************************************
+2023-09-21 17:33:07,736 p=33057 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "ls -l ~/ansible",
+        "delta": "0:00:00.006220",
+        "end": "2023-09-21 17:33:02.994024",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-21 17:33:02.987804",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "总用量 4\n--wxrw--wt. 1 hyperchain hyperchain 276 9月  21 17:33 check_process.sh",
+        "stdout_lines": [
+            "总用量 4",
+            "--wxrw--wt. 1 hyperchain hyperchain 276 9月  21 17:33 check_process.sh"
+        ]
+    }
+}
+2023-09-21 17:33:07,788 p=33057 u=leixiaochen n=ansible | PLAY RECAP ******************************************************************************************
+2023-09-21 17:33:07,788 p=33057 u=leixiaochen n=ansible | 172.16.13.132              : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-21 17:34:54,754 p=33503 u=leixiaochen n=ansible | PLAY [check axiom process] **************************************************************************
+2023-09-21 17:34:54,769 p=33503 u=leixiaochen n=ansible | TASK [Gathering Facts] ******************************************************************************
+2023-09-21 17:34:57,242 p=33503 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-21 17:34:57,279 p=33503 u=leixiaochen n=ansible | TASK [复制脚本到目标服务器上] ***********************************************************************
+2023-09-21 17:34:58,660 p=33503 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-21 17:34:58,677 p=33503 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ***************************************************************************
+2023-09-21 17:34:59,354 p=33503 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "~/ansible/check_process.sh", "delta": "0:00:00.005494", "end": "2023-09-21 17:34:54.662749", "msg": "non-zero return code", "rc": 126, "start": "2023-09-21 17:34:54.657255", "stderr": "/bin/bash: /home/hyperchain/ansible/check_process.sh: 权限不够", "stderr_lines": ["/bin/bash: /home/hyperchain/ansible/check_process.sh: 权限不够"], "stdout": "", "stdout_lines": []}
+2023-09-21 17:34:59,356 p=33503 u=leixiaochen n=ansible | PLAY RECAP ******************************************************************************************
+2023-09-21 17:34:59,356 p=33503 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-21 17:35:10,763 p=33653 u=leixiaochen n=ansible | PLAY [check axiom process] **************************************************************************
+2023-09-21 17:35:10,775 p=33653 u=leixiaochen n=ansible | TASK [Gathering Facts] ******************************************************************************
+2023-09-21 17:35:12,637 p=33653 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-21 17:35:12,677 p=33653 u=leixiaochen n=ansible | TASK [复制脚本到目标服务器上] ***********************************************************************
+2023-09-21 17:35:13,957 p=33653 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-21 17:35:13,973 p=33653 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ***************************************************************************
+2023-09-21 17:35:14,605 p=33653 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "~/ansible/check_process.sh", "delta": "0:00:00.004416", "end": "2023-09-21 17:35:09.924780", "msg": "non-zero return code", "rc": 126, "start": "2023-09-21 17:35:09.920364", "stderr": "/bin/sh: /home/hyperchain/ansible/check_process.sh: 权限不够", "stderr_lines": ["/bin/sh: /home/hyperchain/ansible/check_process.sh: 权限不够"], "stdout": "", "stdout_lines": []}
+2023-09-21 17:35:14,606 p=33653 u=leixiaochen n=ansible | PLAY RECAP ******************************************************************************************
+2023-09-21 17:35:14,606 p=33653 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-21 17:36:56,028 p=34057 u=leixiaochen n=ansible | PLAY [check axiom process] **************************************************************************
+2023-09-21 17:36:56,047 p=34057 u=leixiaochen n=ansible | TASK [Gathering Facts] ******************************************************************************
+2023-09-21 17:36:58,226 p=34057 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-21 17:36:58,263 p=34057 u=leixiaochen n=ansible | TASK [复制脚本到目标服务器上] ***********************************************************************
+2023-09-21 17:36:59,489 p=34057 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-21 17:36:59,505 p=34057 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ***************************************************************************
+2023-09-21 17:37:00,195 p=34057 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-21 17:37:00,211 p=34057 u=leixiaochen n=ansible | TASK [Display result] *******************************************************************************
+2023-09-21 17:37:00,259 p=34057 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "bash ~/ansible/check_process.sh",
+        "delta": "0:00:00.039305",
+        "end": "2023-09-21 17:36:55.516780",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-21 17:36:55.477475",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "检查服务器上有没有axiom的进程, 如果有的话将其杀掉",
+        "stdout_lines": [
+            "检查服务器上有没有axiom的进程, 如果有的话将其杀掉"
+        ]
+    }
+}
+2023-09-21 17:37:00,314 p=34057 u=leixiaochen n=ansible | PLAY RECAP ******************************************************************************************
+2023-09-21 17:37:00,314 p=34057 u=leixiaochen n=ansible | 172.16.13.132              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 09:43:26,066 p=46356 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 09:43:26,083 p=46356 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 09:43:29,419 p=46356 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 09:43:29,456 p=46356 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 09:43:30,782 p=46356 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/x.sh)
+2023-09-22 09:43:31,825 p=46356 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/start_solo.sh)
+2023-09-22 09:43:31,844 p=46356 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 09:43:32,498 p=46356 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "bash start_solo.sh\n", "delta": "0:00:00.011061", "end": "2023-09-22 09:43:27.967076", "msg": "non-zero return code", "rc": 127, "start": "2023-09-22 09:43:27.956015", "stderr": "start_solo.sh:行28: /home/hyperchain/ansible/build_solo/axiom-ledger: 没有那个文件或目录", "stderr_lines": ["start_solo.sh:行28: /home/hyperchain/ansible/build_solo/axiom-ledger: 没有那个文件或目录"], "stdout": "\u001b[0;34m===> Start solo axiom-ledger\u001b[0m", "stdout_lines": ["\u001b[0;34m===> Start solo axiom-ledger\u001b[0m"]}
+2023-09-22 09:43:32,500 p=46356 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 09:43:32,500 p=46356 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-22 09:46:56,757 p=47128 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 09:46:56,770 p=47128 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 09:46:59,212 p=47128 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 09:46:59,246 p=47128 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 09:47:00,596 p=47128 u=leixiaochen n=ansible | ok: [172.16.13.132] => (item=files/x.sh)
+2023-09-22 09:47:01,681 p=47128 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/start_solo.sh)
+2023-09-22 09:47:01,700 p=47128 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 09:47:02,323 p=47128 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "bash start_solo.sh\n", "delta": "0:00:00.011057", "end": "2023-09-22 09:46:57.722348", "msg": "non-zero return code", "rc": 1, "start": "2023-09-22 09:46:57.711291", "stderr": "cp: 无法获取'/bin/axiom-ledger' 的文件状态(stat): 没有那个文件或目录", "stderr_lines": ["cp: 无法获取'/bin/axiom-ledger' 的文件状态(stat): 没有那个文件或目录"], "stdout": "\u001b[0;34m===> Start solo axiom-ledger\u001b[0m", "stdout_lines": ["\u001b[0;34m===> Start solo axiom-ledger\u001b[0m"]}
+2023-09-22 09:47:02,325 p=47128 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 09:47:02,325 p=47128 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-22 09:52:46,570 p=48265 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 09:52:46,586 p=48265 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 09:52:48,999 p=48265 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 09:52:49,035 p=48265 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 09:52:50,228 p=48265 u=leixiaochen n=ansible | ok: [172.16.13.132] => (item=files/x.sh)
+2023-09-22 09:52:51,369 p=48265 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/start_solo.sh)
+2023-09-22 09:52:51,390 p=48265 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 09:52:52,012 p=48265 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "bash start_solo.sh\n", "delta": "0:00:00.013579", "end": "2023-09-22 09:52:47.426430", "msg": "non-zero return code", "rc": 1, "start": "2023-09-22 09:52:47.412851", "stderr": "cp: 无法获取'/bin/axiom-ledger' 的文件状态(stat): 没有那个文件或目录", "stderr_lines": ["cp: 无法获取'/bin/axiom-ledger' 的文件状态(stat): 没有那个文件或目录"], "stdout": "\u001b[0;34m===> Start solo axiom-ledger\u001b[0m", "stdout_lines": ["\u001b[0;34m===> Start solo axiom-ledger\u001b[0m"]}
+2023-09-22 09:52:52,013 p=48265 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 09:52:52,013 p=48265 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-22 09:54:12,394 p=48656 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 09:54:12,410 p=48656 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 09:54:14,910 p=48656 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 09:54:14,944 p=48656 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 09:54:16,212 p=48656 u=leixiaochen n=ansible | ok: [172.16.13.132] => (item=files/x.sh)
+2023-09-22 09:54:17,367 p=48656 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/start_solo.sh)
+2023-09-22 09:54:17,388 p=48656 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:01:00,742 p=48656 u=leixiaochen n=ansible |  [ERROR]: User interrupted execution
+
+2023-09-22 10:06:44,448 p=51071 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:06:44,463 p=51071 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:06:47,503 p=51071 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:06:47,539 p=51071 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:06:48,934 p=51071 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:06:48,951 p=51071 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:06:49,598 p=51071 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "bash control_solo.sh start\n", "delta": "0:00:00.012690", "end": "2023-09-22 10:06:45.018655", "msg": "non-zero return code", "rc": 1, "start": "2023-09-22 10:06:45.005965", "stderr": "cp: 无法创建普通文件'/home/hyperchain/ansible/bin/': 不是目录", "stderr_lines": ["cp: 无法创建普通文件'/home/hyperchain/ansible/bin/': 不是目录"], "stdout": "", "stdout_lines": []}
+2023-09-22 10:06:49,599 p=51071 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:06:49,600 p=51071 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:07:53,269 p=51376 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:07:53,283 p=51376 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:07:55,387 p=51376 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:07:55,431 p=51376 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:07:56,733 p=51376 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:07:56,748 p=51376 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:07:57,381 p=51376 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "bash control_solo.sh start\n", "delta": "0:00:00.013695", "end": "2023-09-22 10:07:52.806276", "msg": "non-zero return code", "rc": 1, "start": "2023-09-22 10:07:52.792581", "stderr": "cp: 无法创建普通文件'/home/hyperchain/ansible/bin/': 不是目录", "stderr_lines": ["cp: 无法创建普通文件'/home/hyperchain/ansible/bin/': 不是目录"], "stdout": "", "stdout_lines": []}
+2023-09-22 10:07:57,382 p=51376 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:07:57,382 p=51376 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:08:37,857 p=51614 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:08:37,874 p=51614 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:08:40,066 p=51614 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:08:40,109 p=51614 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:08:41,467 p=51614 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:08:41,489 p=51614 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:08:42,147 p=51614 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "bash control_solo.sh start\n", "delta": "0:00:00.012517", "end": "2023-09-22 10:08:37.564057", "msg": "non-zero return code", "rc": 1, "start": "2023-09-22 10:08:37.551540", "stderr": "cp: 无法创建普通文件'/home/hyperchain/ansible/bin/axiom-ledger': 没有那个文件或目录", "stderr_lines": ["cp: 无法创建普通文件'/home/hyperchain/ansible/bin/axiom-ledger': 没有那个文件或目录"], "stdout": "", "stdout_lines": []}
+2023-09-22 10:08:42,149 p=51614 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:08:42,149 p=51614 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:09:27,014 p=51857 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:09:27,031 p=51857 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:09:29,070 p=51857 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:09:29,110 p=51857 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:09:30,483 p=51857 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:09:30,502 p=51857 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:09:31,292 p=51857 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:09:31,344 p=51857 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:09:31,344 p=51857 u=leixiaochen n=ansible | 172.16.13.132              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:11:29,467 p=52307 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:11:29,486 p=52307 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:11:31,700 p=52307 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:11:31,745 p=52307 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:11:32,994 p=52307 u=leixiaochen n=ansible | ok: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:11:33,010 p=52307 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:11:34,110 p=52307 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:11:34,166 p=52307 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:11:34,166 p=52307 u=leixiaochen n=ansible | 172.16.13.132              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:22:09,415 p=54285 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:22:09,432 p=54285 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:22:12,678 p=54285 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:22:12,716 p=54285 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:22:13,999 p=54285 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:22:14,016 p=54285 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:22:14,718 p=54285 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:22:14,769 p=54285 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:22:14,770 p=54285 u=leixiaochen n=ansible | 172.16.13.132              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:34:31,037 p=56537 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:34:31,051 p=56537 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:34:33,393 p=56537 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:34:33,427 p=56537 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:34:34,706 p=56537 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:34:34,720 p=56537 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:34:35,530 p=56537 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:34:35,581 p=56537 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:34:35,581 p=56537 u=leixiaochen n=ansible | 172.16.13.132              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:35:01,173 p=56722 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:35:01,188 p=56722 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:35:03,014 p=56722 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:35:03,052 p=56722 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:35:04,249 p=56722 u=leixiaochen n=ansible | ok: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:35:04,264 p=56722 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:35:05,103 p=56722 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:35:05,117 p=56722 u=leixiaochen n=ansible | TASK [Display result] ****************************************************************************************************************************
+2023-09-22 10:35:05,145 p=56722 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "bash control_solo.sh stop\n",
+        "delta": "0:00:00.147346",
+        "end": "2023-09-22 10:35:00.407676",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-22 10:35:00.260330",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "axiom-ledger is not running",
+        "stdout_lines": [
+            "axiom-ledger is not running"
+        ]
+    }
+}
+2023-09-22 10:35:05,195 p=56722 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:35:05,195 p=56722 u=leixiaochen n=ansible | 172.16.13.132              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:37:22,782 p=57220 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:37:22,797 p=57220 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:37:25,211 p=57220 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:37:25,246 p=57220 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:37:26,501 p=57220 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:37:26,517 p=57220 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:37:27,445 p=57220 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "bash control_solo.sh stop\n", "delta": "0:00:00.256695", "end": "2023-09-22 10:37:22.810468", "msg": "non-zero return code", "rc": 159, "start": "2023-09-22 10:37:22.553773", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2023-09-22 10:37:27,446 p=57220 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:37:27,447 p=57220 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:38:41,844 p=57543 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:38:41,862 p=57543 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:38:43,923 p=57543 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:38:43,958 p=57543 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:38:45,223 p=57543 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:38:45,240 p=57543 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:38:46,167 p=57543 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:38:46,184 p=57543 u=leixiaochen n=ansible | TASK [Display result] ****************************************************************************************************************************
+2023-09-22 10:38:46,211 p=57543 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "bash control_solo.sh stop\n",
+        "delta": "0:00:00.313331",
+        "end": "2023-09-22 10:38:41.561990",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-22 10:38:41.248659",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "stop axiom-ledger, pid: 2507167\naxiom-ledger quit",
+        "stdout_lines": [
+            "stop axiom-ledger, pid: 2507167",
+            "axiom-ledger quit"
+        ]
+    }
+}
+2023-09-22 10:38:46,256 p=57543 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:38:46,256 p=57543 u=leixiaochen n=ansible | 172.16.13.132              : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:48:00,852 p=59270 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:48:00,868 p=59270 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:48:03,105 p=59270 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:48:03,147 p=59270 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:48:04,518 p=59270 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:48:04,532 p=59270 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:48:05,455 p=59270 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:48:05,469 p=59270 u=leixiaochen n=ansible | TASK [Display result] ****************************************************************************************************************************
+2023-09-22 10:48:05,497 p=59270 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "bash control_solo.sh start\n",
+        "delta": "0:00:00.297224",
+        "end": "2023-09-22 10:48:00.828895",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-22 10:48:00.531671",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "AxiomLedger-repo: /home/hyperchain/.axiom-ledger\naccount-addr: 0x795f85971D92798AE254C19621367F5Db8af17CF\naccount-key: 445a116d144aa37b1fbc3921b6a173a6673795d97b6607160dc3c4542b58e7e9\np2p-id: 16Uiu2HAmHzrJxAFv3n9xqRkzS8GDBNG1CDZK7GEgmNtCfvtJEHFL\np2p-key: 34b21ac31173c6a99860740d9aa3bb9577e3e48f2317a90b81d11d070b29eabd\np2p-addr: /ip4/0.0.0.0/tcp/4001/p2p/16Uiu2HAmHzrJxAFv3n9xqRkzS8GDBNG1CDZK7GEgmNtCfvtJEHFL\nstart axiom-ledger, pid: 2606410",
+        "stdout_lines": [
+            "AxiomLedger-repo: /home/hyperchain/.axiom-ledger",
+            "account-addr: 0x795f85971D92798AE254C19621367F5Db8af17CF",
+            "account-key: 445a116d144aa37b1fbc3921b6a173a6673795d97b6607160dc3c4542b58e7e9",
+            "p2p-id: 16Uiu2HAmHzrJxAFv3n9xqRkzS8GDBNG1CDZK7GEgmNtCfvtJEHFL",
+            "p2p-key: 34b21ac31173c6a99860740d9aa3bb9577e3e48f2317a90b81d11d070b29eabd",
+            "p2p-addr: /ip4/0.0.0.0/tcp/4001/p2p/16Uiu2HAmHzrJxAFv3n9xqRkzS8GDBNG1CDZK7GEgmNtCfvtJEHFL",
+            "start axiom-ledger, pid: 2606410"
+        ]
+    }
+}
+2023-09-22 10:48:05,543 p=59270 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:48:05,543 p=59270 u=leixiaochen n=ansible | 172.16.13.132              : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:50:32,485 p=59811 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:50:32,498 p=59811 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:50:34,881 p=59811 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:50:34,916 p=59811 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:50:36,352 p=59811 u=leixiaochen n=ansible | ok: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:50:36,367 p=59811 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:50:37,287 p=59811 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:50:37,305 p=59811 u=leixiaochen n=ansible | TASK [Display result] ****************************************************************************************************************************
+2023-09-22 10:50:37,335 p=59811 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "bash control_solo.sh start\n",
+        "delta": "0:00:00.245221",
+        "end": "2023-09-22 10:50:32.630435",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-22 10:50:32.385214",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "AxiomLedger-repo: /home/hyperchain/.axiom-ledger\naccount-addr: 0xF6D5F483cA3438beb810A8b7F2a09aDD8c531d70\naccount-key: b36251d0d584d6d0dd69ac85761c755ed26132b0290c8c203b9a207cd461ff87\np2p-id: 16Uiu2HAm9XbKBnHL3krUGExbX56NgmydVbtB476xhD3VBVuKP3YC\np2p-key: ead3cec6f1c9628aede28c650a64fd86b7b62b50204f6d85be694dcf7b262c67\np2p-addr: /ip4/0.0.0.0/tcp/4001/p2p/16Uiu2HAm9XbKBnHL3krUGExbX56NgmydVbtB476xhD3VBVuKP3YC\nstart axiom-ledger, pid: 2613521",
+        "stdout_lines": [
+            "AxiomLedger-repo: /home/hyperchain/.axiom-ledger",
+            "account-addr: 0xF6D5F483cA3438beb810A8b7F2a09aDD8c531d70",
+            "account-key: b36251d0d584d6d0dd69ac85761c755ed26132b0290c8c203b9a207cd461ff87",
+            "p2p-id: 16Uiu2HAm9XbKBnHL3krUGExbX56NgmydVbtB476xhD3VBVuKP3YC",
+            "p2p-key: ead3cec6f1c9628aede28c650a64fd86b7b62b50204f6d85be694dcf7b262c67",
+            "p2p-addr: /ip4/0.0.0.0/tcp/4001/p2p/16Uiu2HAm9XbKBnHL3krUGExbX56NgmydVbtB476xhD3VBVuKP3YC",
+            "start axiom-ledger, pid: 2613521"
+        ]
+    }
+}
+2023-09-22 10:50:37,378 p=59811 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:50:37,379 p=59811 u=leixiaochen n=ansible | 172.16.13.132              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:52:55,393 p=60318 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:52:55,406 p=60318 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:52:58,607 p=60318 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:52:58,642 p=60318 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:53:00,055 p=60318 u=leixiaochen n=ansible | changed: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:53:00,071 p=60318 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:53:01,062 p=60318 u=leixiaochen n=ansible | fatal: [172.16.13.132]: FAILED! => {"changed": true, "cmd": "bash control_solo.sh start\n", "delta": "0:00:00.221634", "end": "2023-09-22 10:52:56.366994", "msg": "non-zero return code", "rc": 1, "start": "2023-09-22 10:52:56.145360", "stderr": "", "stderr_lines": [], "stdout": "axiom-ledger is running, pid: 2613521", "stdout_lines": ["axiom-ledger is running, pid: 2613521"]}
+2023-09-22 10:53:01,063 p=60318 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:53:01,063 p=60318 u=leixiaochen n=ansible | 172.16.13.132              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-09-22 10:53:21,376 p=60492 u=leixiaochen n=ansible | PLAY [check axiom process] ***********************************************************************************************************************
+2023-09-22 10:53:21,389 p=60492 u=leixiaochen n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************
+2023-09-22 10:53:23,536 p=60492 u=leixiaochen n=ansible | ok: [172.16.13.132]
+2023-09-22 10:53:23,575 p=60492 u=leixiaochen n=ansible | TASK [复制启动脚本到目标服务器上] ****************************************************************************************************************
+2023-09-22 10:53:24,868 p=60492 u=leixiaochen n=ansible | ok: [172.16.13.132] => (item=files/control_solo.sh)
+2023-09-22 10:53:24,884 p=60492 u=leixiaochen n=ansible | TASK [在服务器上执行脚本] ************************************************************************************************************************
+2023-09-22 10:53:25,780 p=60492 u=leixiaochen n=ansible | changed: [172.16.13.132]
+2023-09-22 10:53:25,798 p=60492 u=leixiaochen n=ansible | TASK [Display result] ****************************************************************************************************************************
+2023-09-22 10:53:25,828 p=60492 u=leixiaochen n=ansible | ok: [172.16.13.132] => {
+    "result": {
+        "changed": true,
+        "cmd": "bash control_solo.sh start\n",
+        "delta": "0:00:00.219483",
+        "end": "2023-09-22 10:53:21.147386",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2023-09-22 10:53:20.927903",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "AxiomLedger-repo: /home/hyperchain/.axiom-ledger\naccount-addr: 0xedFD99dA82110974623a89d78c8Cf6911fdBCFb0\naccount-key: c3c09c9804a2855b7a60f206a90d7fa967ebb088bd9d58e62c5f3ead7b61c31d\np2p-id: 16Uiu2HAm57SNdPuvMPfDASQiuoLUbd71ZciKkjX4LHWVxFAWUszc\np2p-key: 74b77f9d233ca8b4c44e1ed57b6e1b2fa7114d3bd243e7b11c9da58173a57745\np2p-addr: /ip4/0.0.0.0/tcp/4001/p2p/16Uiu2HAm57SNdPuvMPfDASQiuoLUbd71ZciKkjX4LHWVxFAWUszc\nstart axiom-ledger, pid: 2621628",
+        "stdout_lines": [
+            "AxiomLedger-repo: /home/hyperchain/.axiom-ledger",
+            "account-addr: 0xedFD99dA82110974623a89d78c8Cf6911fdBCFb0",
+            "account-key: c3c09c9804a2855b7a60f206a90d7fa967ebb088bd9d58e62c5f3ead7b61c31d",
+            "p2p-id: 16Uiu2HAm57SNdPuvMPfDASQiuoLUbd71ZciKkjX4LHWVxFAWUszc",
+            "p2p-key: 74b77f9d233ca8b4c44e1ed57b6e1b2fa7114d3bd243e7b11c9da58173a57745",
+            "p2p-addr: /ip4/0.0.0.0/tcp/4001/p2p/16Uiu2HAm57SNdPuvMPfDASQiuoLUbd71ZciKkjX4LHWVxFAWUszc",
+            "start axiom-ledger, pid: 2621628"
+        ]
+    }
+}
+2023-09-22 10:53:25,875 p=60492 u=leixiaochen n=ansible | PLAY RECAP ***************************************************************************************************************************************
+2023-09-22 10:53:25,876 p=60492 u=leixiaochen n=ansible | 172.16.13.132              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

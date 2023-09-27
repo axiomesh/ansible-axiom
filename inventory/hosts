@@ -1,5 +1,11 @@
 [test1]
 172.16.13.132
+[test2]
+172.16.13.132
+[test3]
+172.16.13.132
+[test4]
+172.16.13.132
 
 [test1:vars]
 ansible_ssh_user="hyperchain"

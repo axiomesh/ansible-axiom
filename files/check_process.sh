@@ -8,3 +8,25 @@ PID=$(ps aux|grep ${name} |grep -v "grep" | awk '{print $2}')
 if [ -n "$PID" ]; then
     kill -9 "$PID"
 fi
+
+
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    restart
+    ;;
+  status)
+    status
+    ;;
+  *)
+    echo "Usage: ./control.sh {start|stop|restart|status}"
+    exit 1
+esac
+
+exit $?

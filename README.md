@@ -1,8 +1,41 @@
-这是使用 ansible 安装 AxiomLedger 节点的操作指南，在使用之前建议先在本地安装 ansible.接下来将给出具体的使用步骤：
+## Ansible-axiom
 
-第一步，指定配置文件路径为仓库根目录下的 ansible.cfg:
-`export ANSIBLE_CONFIG="./ansible.cfg"`，设置后可以通过 `ansible --version`查看配置文件的路径；
-**_注意_**：配置文件中默认指定的 inventory/hosts 和 logs 也在当前目录下。
+This is the guide for deploy AxiomLedger nodes and execute chaosTests using Ansible. It is recommended to first install Ansible on your local machine before proceeding. **NOTE**: Instructions for deploying and using ansible can be found [here](https://github.com/ansible/ansible)
 
-第二步：通过`ansible-playbook`命令执行脚本，并检查结果：
-`ansible-playbook 02_start_solo.yml`
+## Usage
+
+#### Clone project
+
+AxiomLedger start script relies on already compiled binaries. Please install or build AxiomLedger on target machine before starting.
+Use commands below to clone the project:
+`git clone git@github.com:axiomesh/ansible-axiom.git`
+
+#### Configure basic items
+
+1. Specify the configuration file path as ansible.cfg,use the following command to set:
+   `export ANSIBLE_CONFIG="./ansible.cfg" `
+   you can verify the configuration file path by running the command `ansible --version`. The inventory/hosts and logs specified in `ansible.cfg` default located in the current directory.
+
+```
+[defaults]
+# (boolean) By default Ansible will issue a warning when received from a task action (module or action plugin)
+# These warnings can be silenced by adjusting this setting to False.
+;action_warnings=True
+
+# (pathlist) Comma separated list of Ansible inventory sources
+inventory=./inventory/hosts
+
+# (path) File to which Ansible will log on the controller. When empty logging is disabled.
+log_path=./logs/ansible.log
+
+# (boolean) Set this to "False" if you want to avoid host key checking by the underlying tools Ansible uses to connect to the host
+host_key_checking=False
+```
+
+2. Modify the host configuration in `inventory/hosts`. For first time use, you can use the localhost ip group.
+
+3. Modify the `file/x.sh`, fill in the project path and binary path of axiom-ledger. Check the `control_solo/start_solo.yml`, confirm the IP address and execution directory of the target machine.
+
+4. Execute the script using the ansible-playbook command and check the results: `ansible-playbook control_solo/start_solo.yml`
+
+**Noting**: Make sure to review the results after each step. If you encounter any issues, provide more detailed information for further assistance.

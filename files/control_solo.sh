@@ -1,12 +1,13 @@
 #! /bin/bash
 set -e
+#set -x
 
-shell_dir=$(cd $(dirname ${BASH_SOURCE[0]}); pwd)
-#base_dir=$(dirname ${shell_dir})
-app_name=axiom-ledger
-bin_path=${shell_dir}/${app_name}
-cp -f /home/hyperchain/go/bin/${app_name} "${bin_path}"
-pid_file=${shell_dir}/running.pid
+# shellcheck source=/dev/null
+source x.sh
+
+CURRENT_PATH=$(cd $(dirname ${BASH_SOURCE[0]}); pwd)
+cp -f "$AXIOM_LEDGER_BINARY_PATH" "$CURRENT_PATH"/
+pid_file=${CURRENT_PATH}/running.pid
 wait_process_exit_check_time=10
 wait_process_exit_check_interval=0.2
 
@@ -16,11 +17,11 @@ function wait_process_exit(){
     if [ "${process_cnt}" == "2" ]; then
       sleep ${wait_process_exit_check_interval}
     else
-      echo "${app_name} quit"
+      echo "axiom-ledger quit"
       return
     fi
   done
-  echo "stop ${app_name} failed, wait process quit timeout, use kill -9 forced stop"
+  echo "stop axiom-ledger failed, wait process quit timeout, use kill -9 forced stop"
   kill -9 ${1}
 }
 
@@ -28,7 +29,7 @@ function wait_process_exit(){
 function get_running_pid(){
   if [ -s "${pid_file}" ]; then
     pid=$(cat ${pid_file})
-  else pid=$(ps aux|grep ${app_name} |grep -v "grep" | awk '{print $2}')
+  else pid=$(ps aux|grep axiom-ledger |grep -v "grep" | awk '{print $2}')
   fi
   echo "$pid"
 }
@@ -36,18 +37,26 @@ function get_running_pid(){
 function start(){
   pid=$(get_running_pid)
   if [[ ! -n "${pid}" ]]; then
-    rm -rf ~/.axiom-ledger/*
-    rm -rf ${shell_dir}/build_solo/*
-    ${bin_path} config generate --solo
-    cp -f ~/.axiom-ledger/* ${shell_dir}/build_solo/
-    nohup "${bin_path}" --repo ${shell_dir}/build_solo start >/dev/null 2>&1 &
+
+    if [ -d "${CURRENT_PATH}/build_solo/" ];then
+      rm -rf ${CURRENT_PATH}/build_solo/*
+    else 
+      mkdir ${CURRENT_PATH}/build_solo/
+    fi
+    
+    if [ -d "$HOME/.axiom-ledger/" ];then
+      rm -rf "$HOME"/.axiom-ledger
+    fi
+    ${CURRENT_PATH}/axiom-ledger config generate --solo
+    cp -f $HOME/.axiom-ledger/* ${CURRENT_PATH}/build_solo/
+    nohup ${CURRENT_PATH}/axiom-ledger --repo ${CURRENT_PATH}/build_solo start >/dev/null 2>&1 &
       if [[ $? -eq 0 ]]; then
         echo $! > ${pid_file}
-        echo "start ${app_name}, pid: $!"
+        echo "start axiom-ledger, pid: $!"
       else exit 1
       fi
   else 
-    echo "${app_name} is running, pid: ${pid}"
+    echo "axiom-ledger is running, pid: ${pid}"
     exit 1
   fi
 }
@@ -55,10 +64,10 @@ function start(){
 function stop(){
   pid=$(get_running_pid)
   if [[ ! -n "${pid}" ]]; then
-    echo "${app_name} is not running"
+    echo "axiom-ledger is not running"
   else
     kill "${pid}"
-    echo "stop ${app_name}, pid: ${pid}"
+    echo "stop axiom-ledger, pid: ${pid}"
     wait_process_exit "${pid}"
     rm -f "${pid_file}"
   fi
@@ -66,10 +75,10 @@ function stop(){
 
 function restart(){
   stop
-  nohup "${bin_path}" --repo ${shell_dir}/build_solo start >/dev/null 2>&1 &
+  nohup ${CURRENT_PATH}/axiom-ledger --repo ${CURRENT_PATH}/build_solo start >/dev/null 2>&1 &
   if [[ $? -eq 0 ]]; then
     echo $! > ${pid_file}
-    echo "start ${app_name}, pid: $!"
+    echo "start axiom-ledger, pid: $!"
   else exit 1
   fi
 }
@@ -77,9 +86,9 @@ function restart(){
 function status(){
   pid=$(get_running_pid)
   if [[ ! "${pid}" == "" ]]; then
-    echo "${app_name} is running, pid: ${pid}"
+    echo "axiom-ledger is running, pid: ${pid}"
   else
-    echo "${app_name} is stopped"
+    echo "axiom-ledger is stopped"
   fi
 }
 

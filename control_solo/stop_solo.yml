@@ -1,0 +1,24 @@
+- name: Stop solo axiomledger node on target machine
+  hosts: test1
+  tasks:
+    - name: "Copy the script to the target machine"
+      copy:
+        src: "{{ item }}" # file or folder
+        dest: "~/ansible/" #folder, repeated uploads will be overwritten by default
+        owner: hyperchain
+        group: hyperchain
+        mode: 777
+      with_items:
+        - "../files/x.sh"
+        - "../files/control_solo.sh"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_solo.sh stop
+        chdir: ~/ansible
+      register: result
+
+    - name: Display result
+      debug:
+        var: result

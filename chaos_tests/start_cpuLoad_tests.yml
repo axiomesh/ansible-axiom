@@ -1,0 +1,24 @@
+- name: Start chaosTest on one target machine
+  hosts: test1
+  tasks:
+    - name: "Copy the script to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 777
+      with_items:
+        - "../files/x.sh"
+        - "../files/cpu_load/cpu_load.sh"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          nohup bash cpu_load.sh -n 1 -q 12 -c 90 > logs/cpuLoadTest.log 2>&1 &
+        chdir: ~/ansible
+      register: result
+
+    - name: Display result
+      debug:
+        var: result

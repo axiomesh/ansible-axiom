@@ -1,17 +1,18 @@
-- name: check axiom process
+- name: Start solo axiomledger node on target machine
   hosts: test1
   tasks:
-    - name: "复制启动脚本到目标服务器上"
+    - name: "Copy the script to the target machine"
       copy:
-        src: "{{ item }}" #文件或文件夹
-        dest: "~/ansible/" #文件夹
+        src: "{{ item }}"
+        dest: "~/ansible/"
         owner: hyperchain
         group: hyperchain
         mode: 777
       with_items:
-        - "files/control_solo.sh"
+        - "../files/x.sh"
+        - "../files/control_solo.sh"
 
-    - name: "在服务器上执行脚本"
+    - name: "Execute the script on the target machine"
       shell:
         cmd: |
           bash control_solo.sh start

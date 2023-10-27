@@ -1,4 +1,4 @@
-- name: start node1
+- name: Start four axiomledger-nodes on target machine (node1)
   hosts: test1
   vars:
     network1: 172.16.13.132
@@ -6,17 +6,18 @@
     network3: 172.16.13.132
     network4: 172.16.13.132
   tasks:
-    - name: "复制启动脚本到目标服务器上"
+    - name: "Copy the script to the target machine"
       copy:
-        src: "{{ item }}" #文件或文件夹
-        dest: "~/ansible/" #文件夹
+        src: "{{ item }}"
+        dest: "~/ansible/"
         owner: hyperchain
         group: hyperchain
         mode: 777
       with_items:
-        - "files/control_cluster2.sh"
+        - "../files/x.sh"
+        - "../files/control_cluster2.sh"
 
-    - name: "在服务器上执行脚本"
+    - name: "Execute the script on the target machine"
       shell:
         cmd: |
           bash control_cluster2.sh start 1 {{ network1 }} {{ network2 }} {{ network3 }} {{ network4 }}
@@ -26,7 +27,10 @@
     - name: Display result
       debug:
         var: result
-- name: start node2
+
+######################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node2)
   hosts: test2
   vars:
     network1: 172.16.13.132
@@ -34,17 +38,18 @@
     network3: 172.16.13.132
     network4: 172.16.13.132
   tasks:
-    - name: "复制启动脚本到目标服务器上"
+    - name: "Copy the script to the target machine"
       copy:
-        src: "{{ item }}" #文件或文件夹
-        dest: "~/ansible/" #文件夹
+        src: "{{ item }}"
+        dest: "~/ansible/"
         owner: hyperchain
         group: hyperchain
         mode: 777
       with_items:
-        - "files/control_cluster2.sh"
+        - "../files/x.sh"
+        - "../files/control_cluster2.sh"
 
-    - name: "在服务器上执行脚本"
+    - name: "Execute the script on the target machine"
       shell:
         cmd: |
           bash control_cluster2.sh start 2 {{ network1 }} {{ network2 }} {{ network3 }} {{ network4 }}
@@ -54,7 +59,10 @@
     - name: Display result
       debug:
         var: result
-- name: start node3
+
+######################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node3)
   hosts: test3
   vars:
     network1: 172.16.13.132
@@ -62,17 +70,18 @@
     network3: 172.16.13.132
     network4: 172.16.13.132
   tasks:
-    - name: "复制启动脚本到目标服务器上"
+    - name: "Copy the script to the target machine"
       copy:
-        src: "{{ item }}" #文件或文件夹
-        dest: "~/ansible/" #文件夹
+        src: "{{ item }}"
+        dest: "~/ansible/"
         owner: hyperchain
         group: hyperchain
         mode: 777
       with_items:
-        - "files/control_cluster2.sh"
+        - "../files/x.sh"
+        - "../files/control_cluster2.sh"
 
-    - name: "在服务器上执行脚本"
+    - name: "Execute the script on the target machine"
       shell:
         cmd: |
           bash control_cluster2.sh start 3 {{ network1 }} {{ network2 }} {{ network3 }} {{ network4 }}
@@ -82,7 +91,10 @@
     - name: Display result
       debug:
         var: result
-- name: start node4
+
+###################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node4)
   hosts: test4
   vars:
     network1: 172.16.13.132
@@ -90,17 +102,18 @@
     network3: 172.16.13.132
     network4: 172.16.13.132
   tasks:
-    - name: "复制启动脚本到目标服务器上"
+    - name: "Copy the script to the target machine"
       copy:
-        src: "{{ item }}" #文件或文件夹
-        dest: "~/ansible/" #文件夹
+        src: "{{ item }}"
+        dest: "~/ansible/"
         owner: hyperchain
         group: hyperchain
         mode: 777
       with_items:
-        - "files/control_cluster2.sh"
+        - "../files/x.sh"
+        - "../files/control_cluster2.sh"
 
-    - name: "在服务器上执行脚本"
+    - name: "Execute the script on the target machine"
       shell:
         cmd: |
           bash control_cluster2.sh start 4 {{ network1 }} {{ network2 }} {{ network3 }} {{ network4 }}

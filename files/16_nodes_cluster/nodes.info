@@ -1,0 +1,97 @@
+===> Generating 16 nodes configuration on /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes
+
+generate node1 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node1
+account-addr: 0xc7F999b83Af6DF9e67d0a37Ee7e900bF38b3D013
+p2p-id: 16Uiu2HAmJ38LwfY6pfgDWNvk3ypjcpEMSePNTE6Ma2NCLqjbZJSF
+p2p-addr: /ip4/0.0.0.0/tcp/4001/p2p/16Uiu2HAmJ38LwfY6pfgDWNvk3ypjcpEMSePNTE6Ma2NCLqjbZJSF
+
+generate node2 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node2
+account-addr: 0x79a1215469FaB6f9c63c1816b45183AD3624bE34
+p2p-id: 16Uiu2HAmRypzJbdbUNYsCV2VVgv9UryYS5d7wejTJXT73mNLJ8AK
+p2p-addr: /ip4/0.0.0.0/tcp/4002/p2p/16Uiu2HAmRypzJbdbUNYsCV2VVgv9UryYS5d7wejTJXT73mNLJ8AK
+
+generate node3 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node3
+account-addr: 0x97c8B516D19edBf575D72a172Af7F418BE498C37
+p2p-id: 16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk
+p2p-addr: /ip4/0.0.0.0/tcp/4003/p2p/16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk
+
+generate node4 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node4
+account-addr: 0xc0Ff2e0b3189132D815b8eb325bE17285AC898f8
+p2p-id: 16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ
+p2p-addr: /ip4/0.0.0.0/tcp/4004/p2p/16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ
+
+generate node5 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node5
+account-addr: 0xd0091F6D0b39B9E9D2E9051fA46d13B63b8C7B18
+p2p-id: 16Uiu2HAm2HeK145KTfLaURhcoxBUMZ1PfhVnLRfnmE8qncvXWoZj
+p2p-addr: /ip4/0.0.0.0/tcp/4005/p2p/16Uiu2HAm2HeK145KTfLaURhcoxBUMZ1PfhVnLRfnmE8qncvXWoZj
+
+generate node6 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node6
+account-addr: 0xFd19030f51719D5601Bb079e5c5Be1eD07E01de2
+p2p-id: 16Uiu2HAm2CVtLveAtroaN7pcR8U2saBKjwYqRAikMSwxqdoYMxtv
+p2p-addr: /ip4/0.0.0.0/tcp/4006/p2p/16Uiu2HAm2CVtLveAtroaN7pcR8U2saBKjwYqRAikMSwxqdoYMxtv
+
+generate node7 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node7
+account-addr: 0xE4b988C0BEa762B8809a0E4D14F3ac3f922B41B3
+p2p-id: 16Uiu2HAmQv3m5SSyYAoafKmYbTbGmXBaS4DXHXR9wxWKQ9xLzC3n
+p2p-addr: /ip4/0.0.0.0/tcp/4007/p2p/16Uiu2HAmQv3m5SSyYAoafKmYbTbGmXBaS4DXHXR9wxWKQ9xLzC3n
+
+generate node8 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node8
+account-addr: 0x5FC85d64dE2125986b1581b4805a43Bfb3af5E52
+p2p-id: 16Uiu2HAkx1o5fzWLdAobanvE6vqbf1XSbDSgCnid3AoqDGQYFVxo
+p2p-addr: /ip4/0.0.0.0/tcp/4008/p2p/16Uiu2HAkx1o5fzWLdAobanvE6vqbf1XSbDSgCnid3AoqDGQYFVxo
+
+generate node9 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node9
+account-addr: 0xC8025e7362907c04F03de602831513E5D8718dd3
+p2p-id: 16Uiu2HAmMcNp4qwdUNUwf1vHLm97W2o9t4TVMf7mVLAoi4pvvFpb
+p2p-addr: /ip4/0.0.0.0/tcp/4009/p2p/16Uiu2HAmMcNp4qwdUNUwf1vHLm97W2o9t4TVMf7mVLAoi4pvvFpb
+
+generate node10 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node10
+account-addr: 0x8eD52080D93257a23Bf3A5CE8C23014A733a5B16
+p2p-id: 16Uiu2HAmAYsAJsPFHFrYPnMtmDjNV5JuVd7UrY4sRKLq7nEWX4Dn
+p2p-addr: /ip4/0.0.0.0/tcp/4010/p2p/16Uiu2HAmAYsAJsPFHFrYPnMtmDjNV5JuVd7UrY4sRKLq7nEWX4Dn
+
+generate node11 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node11
+account-addr: 0xA44042E92b0CAA75953E9C759A1BDd80190d0d1E
+p2p-id: 16Uiu2HAmAqf9UBn6N9KmvPhbLHoJgyyR94tLUiYaz1Deuho37PPR
+p2p-addr: /ip4/0.0.0.0/tcp/4011/p2p/16Uiu2HAmAqf9UBn6N9KmvPhbLHoJgyyR94tLUiYaz1Deuho37PPR
+
+generate node12 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node12
+account-addr: 0xC849a2E044a4F4bF9911Ae1df675af6c65B85389
+p2p-id: 16Uiu2HAmFRLYNnmrc9Bsf7ypbeScSSaCBqyhV6pwxwmeGs7DkNi2
+p2p-addr: /ip4/0.0.0.0/tcp/4012/p2p/16Uiu2HAmFRLYNnmrc9Bsf7ypbeScSSaCBqyhV6pwxwmeGs7DkNi2
+
+generate node13 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node13
+account-addr: 0x0A12108435A325e2FC5D9AcC794b0102a2207e0B
+p2p-id: 16Uiu2HAkx3S48DCWi1tQdGnE13L41i53YM9JS34bXj1dpyZC5uCA
+p2p-addr: /ip4/0.0.0.0/tcp/4013/p2p/16Uiu2HAkx3S48DCWi1tQdGnE13L41i53YM9JS34bXj1dpyZC5uCA
+
+generate node14 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node14
+account-addr: 0xCDbeb1e20006a582f29C40A2b5F52967f0667eE4
+p2p-id: 16Uiu2HAm4MXFJN1ZiPdjsCV7PTy5vnpQEWXHM26GkjgHz1zu21oy
+p2p-addr: /ip4/0.0.0.0/tcp/4014/p2p/16Uiu2HAm4MXFJN1ZiPdjsCV7PTy5vnpQEWXHM26GkjgHz1zu21oy
+
+generate node15 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node15
+account-addr: 0xe53e2d2c1315e67d3ae2Da9870b64e9378BE9f3a
+p2p-id: 16Uiu2HAm7LHjY33tXZmKGcZe7ScncqGspswDTLyJ8zyErEiMYgCK
+p2p-addr: /ip4/0.0.0.0/tcp/4015/p2p/16Uiu2HAm7LHjY33tXZmKGcZe7ScncqGspswDTLyJ8zyErEiMYgCK
+
+generate node16 config
+AxiomLedger-repo: /home/lxc/code/ansible-axiom/files/16_nodes_cluster/nodes/node16
+account-addr: 0xB5b32CB6D5270B89d34B3037d03E6d2615c4DB3e
+p2p-id: 16Uiu2HAm4bofsppwfcvEJZqEK2ZZDzKzwMFH11GRGSFnkZyjpmTM
+p2p-addr: /ip4/0.0.0.0/tcp/4016/p2p/16Uiu2HAm4bofsppwfcvEJZqEK2ZZDzKzwMFH11GRGSFnkZyjpmTM

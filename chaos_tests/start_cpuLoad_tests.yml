@@ -15,7 +15,7 @@
     - name: "Execute the script on the target machine"
       shell:
         cmd: |
-          nohup bash cpu_load.sh -n 1 -q 12 -c 90 > logs/cpuLoadTest.log 2>&1 &
+          nohup bash cpu_load.sh -n 1 -q 12 -c 90 > cpuLoadTest.log 2>&1 &
         chdir: ~/ansible
       register: result
 

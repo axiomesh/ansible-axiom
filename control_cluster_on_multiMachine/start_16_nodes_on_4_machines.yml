@@ -1,0 +1,114 @@
+- name: Start four axiomledger-nodes on target machine (node1-node4)
+  hosts: chaos-test[0] # ip : 172.16.30.81
+  tasks:
+    - name: "Copy nodes config to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes.sh"
+        - "../files/large_scale_nodes/nodes/node1"
+        - "../files/large_scale_nodes/nodes/node2"
+        - "../files/large_scale_nodes/nodes/node3"
+        - "../files/large_scale_nodes/nodes/node4"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes.sh start 1 4
+        chdir: ~/ansible/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result
+###########################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node5-node8)
+  hosts: chaos-test[1] # ip : 172.16.30.82
+  tasks:
+    - name: "Copy nodes config to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes.sh"
+        - "../files/large_scale_nodes/nodes/node5"
+        - "../files/large_scale_nodes/nodes/node6"
+        - "../files/large_scale_nodes/nodes/node7"
+        - "../files/large_scale_nodes/nodes/node8"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes.sh start 5 8
+        chdir: ~/ansible/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result
+###########################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node9-node12)
+  hosts: chaos-test[2] # ip : 172.16.30.83
+  tasks:
+    - name: "Copy nodes config to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes.sh"
+        - "../files/large_scale_nodes/nodes/node9"
+        - "../files/large_scale_nodes/nodes/node10"
+        - "../files/large_scale_nodes/nodes/node11"
+        - "../files/large_scale_nodes/nodes/node12"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes.sh start 9 12
+        chdir: ~/ansible/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result
+###########################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node13-node16)
+  hosts: chaos-test[3] # ip : 172.16.30.84
+  tasks:
+    - name: "Copy nodes config to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes.sh"
+        - "../files/large_scale_nodes/nodes/node13"
+        - "../files/large_scale_nodes/nodes/node14"
+        - "../files/large_scale_nodes/nodes/node15"
+        - "../files/large_scale_nodes/nodes/node16"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes.sh start 13 16
+        chdir: ~/ansible/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result

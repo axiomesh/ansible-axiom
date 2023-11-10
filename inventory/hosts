@@ -7,10 +7,23 @@
 [test4]
 172.16.13.132
 
+[chaos-test]
+172.16.30.81
+172.16.30.82
+172.16.30.83
+172.16.30.84
+
 [test1:vars]
+ansible_ssh_port=22
 ansible_ssh_user="hyperchain"
 ansible_ssh_pass="hyperchain"
+ansible_sudo_pass="hyperchain"
+
+[chaos-test:vars]
 ansible_ssh_port=22
+ansible_ssh_user="hyperchain"
+ansible_ssh_pass="hyperchain"
+ansible_sudo_pass="hyperchain"
 
 [localhost]
 127.0.0.1

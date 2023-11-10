@@ -15,7 +15,7 @@
     - name: "Execute the script on the target machine"
       shell:
         cmd: |
-          nohup bash mem_load.sh -n 1 -c 60 > logs/memLoadTest.log 2>&1 &
+          nohup bash mem_load.sh -n 1 -c 60 > memLoadTest.log 2>&1 &
         chdir: ~/ansible
       register: result
 

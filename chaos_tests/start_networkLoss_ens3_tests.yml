@@ -1,5 +1,5 @@
 - name: Start chaosTest on one target machine
-  hosts: chaos-test[0]
+  hosts: chaos_test[0]
   tasks:
     - name: "Copy the script to the target machine"
       copy:

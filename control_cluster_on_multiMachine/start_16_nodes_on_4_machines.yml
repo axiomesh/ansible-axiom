@@ -1,5 +1,5 @@
 - name: Start four axiomledger-nodes on target machine (node1-node4)
-  hosts: chaos-test[0] # ip : 172.16.30.81
+  hosts: chaos_test[0] # ip : 172.16.30.81
   tasks:
     - name: "Copy nodes config to the target machine"
       copy:
@@ -28,7 +28,7 @@
 ###########################################################################################################
 
 - name: Start four axiomledger-nodes on target machine (node5-node8)
-  hosts: chaos-test[1] # ip : 172.16.30.82
+  hosts: chaos_test[1] # ip : 172.16.30.82
   tasks:
     - name: "Copy nodes config to the target machine"
       copy:
@@ -57,7 +57,7 @@
 ###########################################################################################################
 
 - name: Start four axiomledger-nodes on target machine (node9-node12)
-  hosts: chaos-test[2] # ip : 172.16.30.83
+  hosts: chaos_test[2] # ip : 172.16.30.83
   tasks:
     - name: "Copy nodes config to the target machine"
       copy:
@@ -86,7 +86,7 @@
 ###########################################################################################################
 
 - name: Start four axiomledger-nodes on target machine (node13-node16)
-  hosts: chaos-test[3] # ip : 172.16.30.84
+  hosts: chaos_test[3] # ip : 172.16.30.84
   tasks:
     - name: "Copy nodes config to the target machine"
       copy:

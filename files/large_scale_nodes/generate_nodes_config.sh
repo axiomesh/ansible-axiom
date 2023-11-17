@@ -9,8 +9,8 @@ CURRENT_PATH=$(
 source ${CURRENT_PATH}/.env.sh
 BUILD_PATH=${CURRENT_PATH}/nodes
 
-N=16
-P=2.5
+N=8
+P=2
 
 function generateNodesConfig() {
   echo "===> Generating $N nodes configuration on ${BUILD_PATH}"
@@ -45,15 +45,6 @@ function generateClusterConfig() {
   rm -rf ${CURRENT_PATH}/config.toml
   cp ${BUILD_PATH}/node1/config.toml ${CURRENT_PATH}/
   sed -i '/candidate_set/d' ${CURRENT_PATH}/config.toml
-
-  cat << EOF >> ${CURRENT_PATH}/config.toml
-
-[[p2p_bootstrap_node_addresses]]
-  id = $i
-  account_address = '$accountAddr'
-  p2p_node_id = '$p2pId'
-  consensus_voting_power = 100
-EOF
 
   for ((i = 5; i < validator_num + 1; i = i + 1)); do
     nodeInfo=$(${BUILD_PATH}/node${i}/axiom-ledger config node-info)

@@ -232,25 +232,19 @@ ulimit = 65535
 [access]
   enable_white_list = false
 
-[[p2p_bootstrap_node_addresses]]
-  id = 17
-  account_address = ''
-  p2p_node_id = ''
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.validator_set]]
+[[genesis.epoch_info.candidate_set]]
   id = 5
   account_address = '0xd0091F6D0b39B9E9D2E9051fA46d13B63b8C7B18'
   p2p_node_id = '16Uiu2HAm2HeK145KTfLaURhcoxBUMZ1PfhVnLRfnmE8qncvXWoZj'
   consensus_voting_power = 100
 
-[[genesis.epoch_info.validator_set]]
+[[genesis.epoch_info.candidate_set]]
   id = 6
   account_address = '0xFd19030f51719D5601Bb079e5c5Be1eD07E01de2'
   p2p_node_id = '16Uiu2HAm2CVtLveAtroaN7pcR8U2saBKjwYqRAikMSwxqdoYMxtv'
   consensus_voting_power = 100
 
-[[genesis.epoch_info.validator_set]]
+[[genesis.epoch_info.candidate_set]]
   id = 7
   account_address = '0xE4b988C0BEa762B8809a0E4D14F3ac3f922B41B3'
   p2p_node_id = '16Uiu2HAmQv3m5SSyYAoafKmYbTbGmXBaS4DXHXR9wxWKQ9xLzC3n'
@@ -260,52 +254,4 @@ ulimit = 65535
   id = 8
   account_address = '0x5FC85d64dE2125986b1581b4805a43Bfb3af5E52'
   p2p_node_id = '16Uiu2HAkx1o5fzWLdAobanvE6vqbf1XSbDSgCnid3AoqDGQYFVxo'
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.candidate_set]]
-  id = 9
-  account_address = '0xf49De37A5755976200e9F85323E7dDD75Fb8ca08'
-  p2p_node_id = '16Uiu2HAm6WA13BtWKoF3qCWqyJ7dtNctbHsa9JsLS9LfAYEWwUUq'
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.candidate_set]]
-  id = 10
-  account_address = '0xf6F6C5843AeadA66e236b4d00073f241Fa8ff887'
-  p2p_node_id = '16Uiu2HAkxGxXN5W5TVQqqBUwL46HUXBXeE9zaZADGfyb6zrsL2Fw'
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.candidate_set]]
-  id = 11
-  account_address = '0x3C2bBa41445c308036e3c86201dC424E62629E81'
-  p2p_node_id = '16Uiu2HAkyng3ugF7k82zKCJC88XLGPcyMhkUoPg6cmb6CUpLkzev'
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.candidate_set]]
-  id = 12
-  account_address = '0x3aAa9a864E2A60f96463E813eA43E6B57E0a68d7'
-  p2p_node_id = '16Uiu2HAmTiBB1xYz1pvCvvnMopHLr1KkFJDK411yebxuCrmwnM5S'
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.candidate_set]]
-  id = 13
-  account_address = '0x72CE846103f3216D0564CcD9C5B464c77cdDA9C0'
-  p2p_node_id = '16Uiu2HAmGySy2CApvCh9S52B9BkPjd541DPpfaCEb2nbTKPPW6J5'
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.candidate_set]]
-  id = 14
-  account_address = '0x55AeECFd2D9ea4703BAc816758a1d2003D6806F1'
-  p2p_node_id = '16Uiu2HAmGtJqG6JsrQRT8FTxGir8aUBuZnyXz2Rzt2HXAA2xtrks'
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.candidate_set]]
-  id = 15
-  account_address = '0x59D3403Dc798C0B1D0f393c2ED7687E8ce30DA00'
-  p2p_node_id = '16Uiu2HAkxbEkvYxsVo6JEcdYCwAoeEq9NaRNR9E9xhiKszuzCuej'
-  consensus_voting_power = 100
-
-[[genesis.epoch_info.candidate_set]]
-  id = 16
-  account_address = '0x044839657D26A9580a06cb2A8725Aecc74288C97'
-  p2p_node_id = '16Uiu2HAmJeYHFSwcuMdPK9FvXWykEUPPKbeAyyAs55R2oNSA1bwz'
   consensus_voting_power = 100

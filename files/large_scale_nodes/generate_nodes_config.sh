@@ -9,8 +9,8 @@ CURRENT_PATH=$(
 source ${CURRENT_PATH}/.env.sh
 BUILD_PATH=${CURRENT_PATH}/nodes
 
-N=8
-P=2
+N=16
+P=2.5
 
 function generateNodesConfig() {
   echo "===> Generating $N nodes configuration on ${BUILD_PATH}"
@@ -38,9 +38,9 @@ function generateNodesConfig() {
 function generateClusterConfig() {
   echo "===> Generating cluster configuration on ${BUILD_PATH}"
   echo "===> Calculate the number of validator and candidate"
-  validator_num=$(echo "($N + $P - 1) / $P" | bc)
+  validator_num=$(echo "$N / $P + 1" | bc)
   #candidate_num=$(echo "$N - $validator_num" | bc)
-  echo "$validator_num"
+  echo "validator number is : $validator_num"
  
   rm -rf ${CURRENT_PATH}/config.toml
   cp ${BUILD_PATH}/node1/config.toml ${CURRENT_PATH}/
@@ -89,8 +89,8 @@ EOF
 /ip4/172.16.30.81/tcp/4003/p2p/16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk;\
 /ip4/172.16.30.81/tcp/4004/p2p/16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ;\
 "' >>${BUILD_PATH}/node$i/.env.sh
-
   done
+  rm -rf ${CURRENT_PATH}/config.toml
 }
 
 generateNodesConfig

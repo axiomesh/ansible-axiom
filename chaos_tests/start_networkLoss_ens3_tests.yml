@@ -1,5 +1,5 @@
 - name: Start chaosTest on one target machine
-  hosts: chaos_test[0]
+  hosts: chaos_test[3]
   tasks:
     - name: "Copy the script to the target machine"
       copy:
@@ -10,12 +10,12 @@
         mode: 777
       with_items:
         - "../files/x.sh"
-        - "../files/network_loss/network_loss_lo.sh"
+        - "../files/network_loss/network_loss_ens3.sh"
 
     - name: "Execute the script on the target machine"
       shell:
         cmd: |
-          nohup bash network_loss_ens3.sh -n 1 -p 4001-4004 -c 30 > networkLossTest.log 2>&1 &
+          nohup bash network_loss_ens3.sh -n 1 -p 4013-4016 -c 100 > networkLossTest.log 2>&1 &
         chdir: ~/ansible
       register: result
 

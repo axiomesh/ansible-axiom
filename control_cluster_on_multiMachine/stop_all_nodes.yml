@@ -1,0 +1,24 @@
+- name: Stop axiomledger-nodes on target machines
+  hosts: chaos_test
+  ignore_unreachable: true
+  tasks:
+    - name: "Copy script to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes_v2.sh"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes_v2.sh stop
+        chdir: ~/ansible/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result

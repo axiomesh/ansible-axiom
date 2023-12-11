@@ -1,4 +1,4 @@
 logs
 nodes*
-#files/large_scale_nodes/config.toml
-#files/large_scale_nodes/nodes.info
+files/large_scale_nodes/*toml
+files/large_scale_nodes/*.info

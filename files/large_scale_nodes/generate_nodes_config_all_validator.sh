@@ -29,7 +29,7 @@ function generateNodesConfig() {
     echo "export AXIOM_LEDGER_PORT_PPROF=${PPROF_PORT}" >>${root}/.env.sh
     echo "export AXIOM_LEDGER_PORT_MONITOR=${MONITOR_PORT}" >>${root}/.env.sh
   
-    ${root}/axiom-ledger config generate --default-node-index ${i} #--epoch-enable
+    ${root}/axiom-ledger config generate --default-node-index ${i} --epoch-enable
   done
 }
 
@@ -40,37 +40,42 @@ function generateClusterConfig() {
   #candidate_num=$(echo "$N - $validator_num" | bc)
   echo "validator number is : $validator_num"
  
-  rm -rf ${CURRENT_PATH}/config.toml
-  cp ${BUILD_PATH}/node1/config.toml ${CURRENT_PATH}/
-  sed -i '/candidate_set/d' ${CURRENT_PATH}/config.toml
+  rm -rf ${CURRENT_PATH}/genesis.toml
+  cp ${BUILD_PATH}/node1/genesis.toml ${CURRENT_PATH}/
 
-  for ((i = 5; i <= validator_num; i = i + 1)); do
+  for ((i = 9; i <= validator_num; i = i + 1)); do
     nodeInfo=$(${BUILD_PATH}/node${i}/axiom-ledger config node-info)
 
     #echo "$nodeInfo"
     accountAddr=$(echo "$nodeInfo" |grep account-addr | awk {'print $2'})
     p2pId=$(echo "$nodeInfo" |grep p2p-id | awk {'print $2'})
     echo "######## $i #####validator#####$accountAddr"
-cat << EOF >> ${CURRENT_PATH}/config.toml
+    nodeName=$(echo "node$i" | base64)
+cat << EOF >> ${CURRENT_PATH}/genesis.toml
 
-[[genesis.epoch_info.validator_set]]
+[[node_names]]
+id = $i
+name = '$nodeName'
+
+[[epoch_info.validator_set]]
   id = $i
   account_address = '$accountAddr'
   p2p_node_id = '$p2pId'
-  consensus_voting_power = 100
+  consensus_voting_power = 1000
 EOF
   done
 
   for ((i = 1; i <= $validator_num; i = i + 1)); do
-    cp -r ${CURRENT_PATH}/config.toml ${BUILD_PATH}/node$i/
+    cp -r ${CURRENT_PATH}/genesis.toml ${BUILD_PATH}/node$i/
     echo 'export AXIOM_LEDGER_GENESIS_EPOCH_INFO_P2P_BOOTSTRAP_NODE_ADDRESSES="\
 /ip4/172.16.30.81/tcp/4001/p2p/16Uiu2HAmJ38LwfY6pfgDWNvk3ypjcpEMSePNTE6Ma2NCLqjbZJSF;\
 /ip4/172.16.30.81/tcp/4002/p2p/16Uiu2HAmRypzJbdbUNYsCV2VVgv9UryYS5d7wejTJXT73mNLJ8AK;\
 /ip4/172.16.30.81/tcp/4003/p2p/16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk;\
 /ip4/172.16.30.81/tcp/4004/p2p/16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ;\
 "' >>${BUILD_PATH}/node$i/.env.sh
+    echo 'export AXIOM_LEDGER_LOG_MODULE_CONSENSUS='info'' >>${BUILD_PATH}/node$i/.env.sh
   done
-  #rm -rf ${CURRENT_PATH}/config.toml
+  #rm -rf ${CURRENT_PATH}/genesis.toml
 }
 
 function recordNodesConfig() {

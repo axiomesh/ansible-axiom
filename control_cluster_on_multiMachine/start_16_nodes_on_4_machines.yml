@@ -2,7 +2,7 @@
   hosts: chaos_test[0]
   ignore_unreachable: true
   tasks:
-    - name: "Copy nodes config to the target machine"
+    - name: "Copy nodes config and scripts to the target machine"
       copy:
         src: "{{ item }}"
         dest: "~/ansible/nodes/"

@@ -1,0 +1,37 @@
+[timed_gen_block]
+  no_tx_batch_timeout = '2s'
+
+[limit]
+  enable = false
+  limit = 10000
+  burst = 10000
+
+[tx_pool]
+  pool_size = 50000
+  batch_timeout = '500ms'
+  tolerance_time = '5m0s'
+  tolerance_remove_time = '15m0s'
+  tolerance_nonce_gap = 1000
+
+[tx_cache]
+  set_size = 50
+  set_timeout = '100ms'
+
+[rbft]
+  enable_multi_pipes = false
+  enable_metrics = true
+  committed_block_cache_number = 10
+
+  [rbft.timeout]
+    null_request = '3s'
+    request = '2s'
+    resend_viewchange = '10s'
+    clean_viewchange = '1m0s'
+    new_view = '8s'
+    sync_state = '1s'
+    sync_state_restart = '10m0s'
+    fetch_checkpoint = '5s'
+    fetch_view = '1s'
+
+[solo]
+  checkpoint_period = 10

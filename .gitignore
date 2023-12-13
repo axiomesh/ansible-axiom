@@ -1,4 +1,7 @@
 logs
-nodes*
-#files/large_scale_nodes/config.toml
-#files/large_scale_nodes/nodes.info
+files/large_scale_nodes/nodes*
+files/large_scale_nodes/*toml
+files/large_scale_nodes/*.info
+files/nodes_manager/config-sample/tools/bin/*
+files/nodes_manager/new-nodes/*
+files/nodes_manager/*.info

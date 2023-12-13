@@ -10,7 +10,7 @@ source ${CURRENT_PATH}/.env.sh
 BUILD_PATH=${CURRENT_PATH}/nodes
 
 N=$1
-function generateNodesConfig() {
+function generateNewConfig() {
   echo "===> Generating $N nodes configuration on ${BUILD_PATH}"
   for ((i = 1; i <= N; i = i + 1)); do
     root=${BUILD_PATH}/node${i}
@@ -75,22 +75,25 @@ EOF
 "' >>${BUILD_PATH}/node$i/.env.sh
     echo 'export AXIOM_LEDGER_LOG_MODULE_CONSENSUS='info'' >>${BUILD_PATH}/node$i/.env.sh
   done
-  #rm -rf ${CURRENT_PATH}/genesis.toml
 }
 
 function recordNodesConfig() {
-  rm -rf ${CURRENT_PATH}/nodes.info
 
   echo "===> record $N nodes configuration on nodes.info "
+  recordTime=$(date +"%Y-%m-%d-%s")
+  echo "===> record time is : $recordTime"
+
   for ((i = 1; i < N + 1; i = i + 1)); do
     nodeInfo=$(${BUILD_PATH}/node${i}/axiom-ledger config node-info)
     accountAddr=$(echo "$nodeInfo" |grep account-addr | awk {'print $2'})
     p2pId=$(echo "$nodeInfo" |grep p2p-id | awk {'print $2'})
     #echo "######## $i #####validator#####$accountAddr"
-cat << EOF >> ${CURRENT_PATH}/nodes.info
+    nodeName=$(echo "node$i" | base64)
+cat << EOF >> ${CURRENT_PATH}/nodes-$recordTime.info
 
 [[nodes]]
   id = $i
+  name = '$nodeName'
   account_address = '$accountAddr'
   p2p_node_id = '$p2pId'
 EOF

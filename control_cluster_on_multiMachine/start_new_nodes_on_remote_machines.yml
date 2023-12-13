@@ -1,0 +1,28 @@
+- name: Start four axiomledger-nodes on target machine (node1-node4)
+  hosts: test1
+  ignore_unreachable: true
+  tasks:
+    - name: "Copy nodes config and scripts to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/data/ansible/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes_v2.sh"
+        - "../files/node_operation/new-nodes/node1"
+        - "../files/node_operation/new-nodes/node2"
+        - "../files/node_operation/new-nodes/node3"
+        - "../files/node_operation/new-nodes/node4"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes_v2.sh start
+        chdir: ~/data/ansible/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result

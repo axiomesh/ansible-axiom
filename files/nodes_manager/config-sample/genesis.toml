@@ -1,0 +1,177 @@
+chainid = 1356
+balance = '10000000000000000000000000000000000000000'
+init_white_list_providers = [
+  '0xc7F999b83Af6DF9e67d0a37Ee7e900bF38b3D013',
+  '0x79a1215469FaB6f9c63c1816b45183AD3624bE34',
+  '0x97c8B516D19edBf575D72a172Af7F418BE498C37',
+  '0xc0Ff2e0b3189132D815b8eb325bE17285AC898f8',
+  '0xd0091F6D0b39B9E9D2E9051fA46d13B63b8C7B18',
+  '0xFd19030f51719D5601Bb079e5c5Be1eD07E01de2',
+  '0xE4b988C0BEa762B8809a0E4D14F3ac3f922B41B3',
+  '0x5FC85d64dE2125986b1581b4805a43Bfb3af5E52'
+]
+accounts = [
+  '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+  '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
+  '0x90F79bf6EB2c4f870365E785982E1f101E93b906',
+  '0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65',
+  '0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc',
+  '0x976EA74026E726554dB657fA54763abd0C3a0aa9',
+  '0x14dC79964da2C08b23698B3D3cc7Ca32193d9955',
+  '0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f',
+  '0xa0Ee7A142d267C1f36714E4a8F75612F20a79720',
+  '0xBcd4042DE499D14e55001CcbB24a551F3b954096',
+  '0x71bE63f3384f5fb98995898A86B02Fb2426c5788',
+  '0xFABB0ac9d68B0B445fB7357272Ff202C5651694a',
+  '0x1CBd3b2770909D4e10f157cABC84C7264073C9Ec',
+  '0xdF3e18d64BC6A983f673Ab319CCaE4f1a57C7097',
+  '0xcd3B766CCDd6AE721141F452C550Ca635964ce71',
+  '0x2546BcD3c84621e976D8185a91A922aE77ECEc30',
+  '0xbDA5747bFD65F08deb54cb465eB87D40e51B197E',
+  '0xdD2FD4581271e230360230F9337D5c0430Bf44C0',
+  '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199'
+]
+
+[[admins]]
+address = '0xc7F999b83Af6DF9e67d0a37Ee7e900bF38b3D013'
+weight = 1
+name = 'S2luZw=='
+
+[[admins]]
+address = '0x79a1215469FaB6f9c63c1816b45183AD3624bE34'
+weight = 1
+name = 'UmVk'
+
+[[admins]]
+address = '0x97c8B516D19edBf575D72a172Af7F418BE498C37'
+weight = 1
+name = 'QXBwbGU='
+
+[[admins]]
+address = '0xc0Ff2e0b3189132D815b8eb325bE17285AC898f8'
+weight = 1
+name = 'Q2F0'
+
+[epoch_info]
+  version = 1
+  epoch = 1
+  epoch_period = 100
+  start_block = 1
+  p2p_bootstrap_node_addresses = [
+    '/ip4/172.16.13.132/tcp/4551/p2p/16Uiu2HAmJ38LwfY6pfgDWNvk3ypjcpEMSePNTE6Ma2NCLqjbZJSF',
+    '/ip4/172.16.13.133/tcp/4552/p2p/16Uiu2HAmRypzJbdbUNYsCV2VVgv9UryYS5d7wejTJXT73mNLJ8AK',
+    '/ip4/172.16.13.134/tcp/4553/p2p/16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk',
+    '/ip4/172.16.13.135/tcp/4554/p2p/16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ',
+    '/ip4/172.16.13.132/tcp/4555/p2p/16Uiu2HAm2HeK145KTfLaURhcoxBUMZ1PfhVnLRfnmE8qncvXWoZj',
+    '/ip4/172.16.13.133/tcp/4556/p2p/16Uiu2HAm2CVtLveAtroaN7pcR8U2saBKjwYqRAikMSwxqdoYMxtv',
+    '/ip4/172.16.13.134/tcp/4557/p2p/16Uiu2HAmQv3m5SSyYAoafKmYbTbGmXBaS4DXHXR9wxWKQ9xLzC3n',
+    '/ip4/172.16.13.135/tcp/4558/p2p/16Uiu2HAkx1o5fzWLdAobanvE6vqbf1XSbDSgCnid3AoqDGQYFVxo'
+  ]
+  data_syncer_set = []
+
+  [epoch_info.consensus_params]
+    validator_election_type = 'wrf'
+    proposer_election_type = 'wrf'
+    checkpoint_period = 1
+    high_watermark_checkpoint_period = 10
+    max_validator_num = 4
+    block_max_tx_num = 500
+    enable_timed_gen_empty_block = false
+    not_active_weight = 1
+    abnormal_node_exclude_view = 10
+    again_propose_interval_block_in_validators_num_percentage = 30
+    continuous_null_request_tolerance_number = 3
+    rebroadcast_tolerance_number = 2
+
+  [epoch_info.finance_params]
+    gas_limit = 100000000
+    start_gas_price_available = true
+    start_gas_price = 5000000000000
+    max_gas_price = 10000000000000
+    min_gas_price = 1000000000000
+    gas_change_rate_value = 1250
+    gas_change_rate_decimals = 4
+
+  [epoch_info.misc_params]
+    tx_max_size = 131072
+
+[[epoch_info.validator_set]]
+  id = 1
+  account_address = '0xc7F999b83Af6DF9e67d0a37Ee7e900bF38b3D013'
+  p2p_node_id = '16Uiu2HAmJ38LwfY6pfgDWNvk3ypjcpEMSePNTE6Ma2NCLqjbZJSF'
+  consensus_voting_power = 8000
+
+[[epoch_info.validator_set]]
+  id = 2
+  account_address = '0x79a1215469FaB6f9c63c1816b45183AD3624bE34'
+  p2p_node_id = '16Uiu2HAmRypzJbdbUNYsCV2VVgv9UryYS5d7wejTJXT73mNLJ8AK'
+  consensus_voting_power = 7000
+
+[[epoch_info.validator_set]]
+  id = 3
+  account_address = '0x97c8B516D19edBf575D72a172Af7F418BE498C37'
+  p2p_node_id = '16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk'
+  consensus_voting_power = 6000
+
+[[epoch_info.validator_set]]
+  id = 4
+  account_address = '0xc0Ff2e0b3189132D815b8eb325bE17285AC898f8'
+  p2p_node_id = '16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ'
+  consensus_voting_power = 5000
+
+[[epoch_info.candidate_set]]
+  id = 5
+  account_address = '0xd0091F6D0b39B9E9D2E9051fA46d13B63b8C7B18'
+  p2p_node_id = '16Uiu2HAm2HeK145KTfLaURhcoxBUMZ1PfhVnLRfnmE8qncvXWoZj'
+  consensus_voting_power = 4000
+
+[[epoch_info.candidate_set]]
+  id = 6
+  account_address = '0xFd19030f51719D5601Bb079e5c5Be1eD07E01de2'
+  p2p_node_id = '16Uiu2HAm2CVtLveAtroaN7pcR8U2saBKjwYqRAikMSwxqdoYMxtv'
+  consensus_voting_power = 3000
+
+[[epoch_info.candidate_set]]
+  id = 7
+  account_address = '0xE4b988C0BEa762B8809a0E4D14F3ac3f922B41B3'
+  p2p_node_id = '16Uiu2HAmQv3m5SSyYAoafKmYbTbGmXBaS4DXHXR9wxWKQ9xLzC3n'
+  consensus_voting_power = 2000
+
+[[epoch_info.candidate_set]]
+  id = 8
+  account_address = '0x5FC85d64dE2125986b1581b4805a43Bfb3af5E52'
+  p2p_node_id = '16Uiu2HAkx1o5fzWLdAobanvE6vqbf1XSbDSgCnid3AoqDGQYFVxo'
+  consensus_voting_power = 1000
+
+[[node_names]]
+id = 1
+name = 'S2luZw=='
+
+[[node_names]]
+id = 2
+name = 'UmVk'
+
+[[node_names]]
+id = 3
+name = 'QXBwbGU='
+
+[[node_names]]
+id = 4
+name = 'Q2F0'
+
+[[node_names]]
+id = 5
+name = 'bm9kZTU='
+
+[[node_names]]
+id = 6
+name = 'bm9kZTY='
+
+[[node_names]]
+id = 7
+name = 'bm9kZTc='
+
+[[node_names]]
+id = 8
+name = 'bm9kZTg='

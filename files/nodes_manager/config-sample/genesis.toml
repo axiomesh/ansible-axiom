@@ -75,7 +75,7 @@ name = 'Q2F0'
     proposer_election_type = 'wrf'
     checkpoint_period = 1
     high_watermark_checkpoint_period = 10
-    max_validator_num = 4
+    max_validator_num = 8
     block_max_tx_num = 500
     enable_timed_gen_empty_block = false
     not_active_weight = 1
@@ -142,7 +142,7 @@ name = 'Q2F0'
   id = 8
   account_address = '0x5FC85d64dE2125986b1581b4805a43Bfb3af5E52'
   p2p_node_id = '16Uiu2HAkx1o5fzWLdAobanvE6vqbf1XSbDSgCnid3AoqDGQYFVxo'
-  consensus_voting_power = 1000
+  consensus_voting_power = 0
 
 [[node_names]]
 id = 1

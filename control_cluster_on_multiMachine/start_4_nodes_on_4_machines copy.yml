@@ -1,0 +1,105 @@
+- name: Start four axiomledger-nodes on target machine (node1-node4)
+  hosts: chaos_test[0]
+  ignore_unreachable: true
+  tasks:
+    - name: "Copy nodes config and scripts to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible-lrx/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes_v2.sh"
+        - "../files/large_scale_nodes/nodes/node1"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes_v2.sh start
+        chdir: ~/ansible-lrx/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result
+###########################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node5-node8)
+  hosts: chaos_test[1]
+  ignore_unreachable: true
+  tasks:
+    - name: "Copy nodes config to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible-lrx/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes_v2.sh"
+        - "../files/large_scale_nodes/nodes/node2"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes_v2.sh start
+        chdir: ~/ansible-lrx/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result
+###########################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node9-node12)
+  hosts: chaos_test[2]
+  ignore_unreachable: true
+  tasks:
+    - name: "Copy nodes config to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible-lrx/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes_v2.sh"
+        - "../files/large_scale_nodes/nodes/node3"
+
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes_v2.sh start
+        chdir: ~/ansible-lrx/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result
+###########################################################################################################
+
+- name: Start four axiomledger-nodes on target machine (node13-node16)
+  hosts: chaos_test[3]
+  ignore_unreachable: true
+  tasks:
+    - name: "Copy nodes config to the target machine"
+      copy:
+        src: "{{ item }}"
+        dest: "~/ansible-lrx/nodes/"
+        owner: hyperchain
+        group: hyperchain
+        mode: 0755
+      with_items:
+        - "../files/large_scale_nodes/control_nodes_v2.sh"
+        - "../files/large_scale_nodes/nodes/node4"
+    - name: "Execute the script on the target machine"
+      shell:
+        cmd: |
+          bash control_nodes_v2.sh start
+        chdir: ~/ansible-lrx/nodes/
+      register: result
+
+    - name: Display result
+      debug:
+        var: result

@@ -21,7 +21,7 @@ function generateNodesConfig() {
     rm -rf "${root:?}"/*
     rm -f "${root}"/.env.sh
     cp -rf "${AXIOM_LEDGER_PROJECT_PATH}"/scripts/package/* "${root}"/
-    cp -f "${AXIOM_LEDGER_BINARY_PATH}" "${root}"/tools/bin/
+    cp -f "${AXIOM_LEDGER_PROJECT_PATH}"/bin/axiom-ledger "${root}"/tools/bin/
     # shellcheck disable=SC2219
     let JSONRPC_PORT=$START_JSONRPC_PORT+i,WEBSOCKET_PORT=$START_WEBSOCKET_PORT+i,P2P_PORT=$START_P2P_PORT+i,PPROF_PORT=$START_PPROF_PORT+i,MONITOR_PORT=$START_MONITOR_PORT+i
 
@@ -35,6 +35,7 @@ function generateNodesConfig() {
     } >>"${root}"/.env.sh
   
     "${root}"/axiom-ledger config generate --default-node-index ${i} --epoch-enable
+    cp -f "${AXIOM_LEDGER_BINARY_PATH}" "${root}"/tools/bin/
   done
 }
 
@@ -71,10 +72,10 @@ EOF
   for ((i = 1; i <= $validator_num; i = i + 1)); do
     cp -r "${CURRENT_PATH}"/genesis.toml "${BUILD_PATH}"/node$i/
     echo 'export AXIOM_LEDGER_GENESIS_EPOCH_INFO_P2P_BOOTSTRAP_NODE_ADDRESSES="\
-/ip4/172.16.30.81/tcp/4001/p2p/16Uiu2HAmJ38LwfY6pfgDWNvk3ypjcpEMSePNTE6Ma2NCLqjbZJSF;\
-/ip4/172.16.30.81/tcp/4002/p2p/16Uiu2HAmRypzJbdbUNYsCV2VVgv9UryYS5d7wejTJXT73mNLJ8AK;\
-/ip4/172.16.30.81/tcp/4003/p2p/16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk;\
-/ip4/172.16.30.81/tcp/4004/p2p/16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ;\
+/ip4/172.16.13.132/tcp/4001/p2p/16Uiu2HAmJ38LwfY6pfgDWNvk3ypjcpEMSePNTE6Ma2NCLqjbZJSF;\
+/ip4/172.16.13.133/tcp/4002/p2p/16Uiu2HAmRypzJbdbUNYsCV2VVgv9UryYS5d7wejTJXT73mNLJ8AK;\
+/ip4/172.16.13.134/tcp/4003/p2p/16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk;\
+/ip4/172.16.13.135/tcp/4004/p2p/16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ;\
 "' >>"${BUILD_PATH}"/node$i/.env.sh
     echo 'export AXIOM_LEDGER_LOG_MODULE_CONSENSUS='info'' >>"${BUILD_PATH}"/node$i/.env.sh
   done

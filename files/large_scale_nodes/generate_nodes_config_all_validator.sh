@@ -75,6 +75,10 @@ EOF
 /ip4/172.16.30.81/tcp/4002/p2p/16Uiu2HAmRypzJbdbUNYsCV2VVgv9UryYS5d7wejTJXT73mNLJ8AK;\
 /ip4/172.16.30.81/tcp/4003/p2p/16Uiu2HAmTwEET536QC9MZmYFp1NUshjRuaq5YSH1sLjW65WasvRk;\
 /ip4/172.16.30.81/tcp/4004/p2p/16Uiu2HAmQBFTnRr84M3xNhi3EcWmgZnnBsDgewk4sNtpA3smBsHJ;\
+/ip4/172.16.30.82/tcp/4005/p2p/16Uiu2HAm2HeK145KTfLaURhcoxBUMZ1PfhVnLRfnmE8qncvXWoZj;\
+/ip4/172.16.30.82/tcp/4006/p2p/16Uiu2HAm2CVtLveAtroaN7pcR8U2saBKjwYqRAikMSwxqdoYMxtv;\
+/ip4/172.16.30.82/tcp/4007/p2p/16Uiu2HAmQv3m5SSyYAoafKmYbTbGmXBaS4DXHXR9wxWKQ9xLzC3n;\
+/ip4/172.16.30.82/tcp/4008/p2p/16Uiu2HAkx1o5fzWLdAobanvE6vqbf1XSbDSgCnid3AoqDGQYFVxo;\
 "' >>"${BUILD_PATH}"/node$i/.env.sh
     echo 'export AXIOM_LEDGER_LOG_MODULE_CONSENSUS='info'' >>"${BUILD_PATH}"/node$i/.env.sh
   done

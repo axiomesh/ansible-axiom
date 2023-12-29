@@ -1,5 +1,5 @@
 logs
-files/large_scale_nodes/nodes*
+files/large_scale_nodes/*nodes*
 files/large_scale_nodes/*toml
 files/large_scale_nodes/*.info
 files/nodes_manager/config-sample/tools/bin/*

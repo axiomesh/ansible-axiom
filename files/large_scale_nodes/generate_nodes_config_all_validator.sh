@@ -31,7 +31,7 @@ function generateNodesConfig() {
     echo "export AXIOM_LEDGER_PORT_P2P=${P2P_PORT}"
     echo "export AXIOM_LEDGER_PORT_PPROF=${PPROF_PORT}"
     echo "export AXIOM_LEDGER_PORT_MONITOR=${MONITOR_PORT}"
-    echo "export AXIOM_LEDGER_GENESIS_EPOCH_INFO_MAX_VALIDATOR_NUM=${N}"
+    echo "export AXIOM_LEDGER_GENESIS_EPOCH_INFO_CONSENSUS_PARAMS_MAX_VALIDATOR_NUM=${N}"
     } >>"${root}"/.env.sh
   
     "${root}"/axiom-ledger config generate --default-node-index ${i} --epoch-enable

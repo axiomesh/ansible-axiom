@@ -1,8 +1,8 @@
-- name: Start four axiomledger-nodes on target machine (node1-node4)
-  hosts: test85
+- name: Clean axiomledger-nodes data on target machines
+  hosts: chaos_test
   ignore_unreachable: true
   tasks:
-    - name: "Copy nodes config and scripts to the target machine"
+    - name: "Copy script to the target machine"
       copy:
         src: "{{ item }}"
         dest: "~/ansible/nodes/"
@@ -11,15 +11,11 @@
         mode: 0755
       with_items:
         - "../files/large_scale_nodes/control_nodes_v2.sh"
-        - "../files/large_scale_nodes/new-nodes/node17"
-        - "../files/large_scale_nodes/new-nodes/node18"
-        - "../files/large_scale_nodes/new-nodes/node19"
-        - "../files/large_scale_nodes/new-nodes/node20"
 
     - name: "Execute the script on the target machine"
       shell:
         cmd: |
-          bash control_nodes_v2.sh start
+          bash control_nodes_v2.sh clean_consensus
         chdir: ~/ansible/nodes/
       register: result
 

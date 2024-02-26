@@ -32,6 +32,8 @@ function generateNodesConfig() {
     echo "export AXIOM_LEDGER_PORT_PPROF=${PPROF_PORT}"
     echo "export AXIOM_LEDGER_PORT_MONITOR=${MONITOR_PORT}"
     echo "export AXIOM_LEDGER_GENESIS_EPOCH_INFO_CONSENSUS_PARAMS_MAX_VALIDATOR_NUM=${N}"
+    echo "export AXIOM_LEDGER_GENESIS_BALANCE=${AXIOM_LEDGER_GENESIS_BALANCE}"
+    echo "export AXIOM_LEDGER_GENESIS_TOKEN_TOTAL_SUPPLY=${AXIOM_LEDGER_GENESIS_TOKEN_TOTAL_SUPPLY}"
     } >>"${root}"/.env.sh
   
     "${root}"/axiom-ledger config generate --default-node-index ${i} --epoch-enable
@@ -50,7 +52,7 @@ function generateClusterConfig() {
 
   for ((i = 9; i <= validator_num; i = i + 1)); do
     nodeInfo=$("${BUILD_PATH}"/node${i}/axiom-ledger config node-info)
-    accountAddr=$(echo "$nodeInfo" |grep account-addr | awk {'print $2'})
+    accountAddr=$(echo "$nodeInfo" |grep node-key-addr | awk {'print $2'})
     p2pId=$(echo "$nodeInfo" |grep p2p-id | awk {'print $2'})
     #echo "######## $i #####validator#####$accountAddr"
     nodeName=$(echo "node$i" | base64)
@@ -80,7 +82,7 @@ EOF
 /ip4/172.16.30.82/tcp/4007/p2p/16Uiu2HAmQv3m5SSyYAoafKmYbTbGmXBaS4DXHXR9wxWKQ9xLzC3n;\
 /ip4/172.16.30.82/tcp/4008/p2p/16Uiu2HAkx1o5fzWLdAobanvE6vqbf1XSbDSgCnid3AoqDGQYFVxo;\
 "' >>"${BUILD_PATH}"/node$i/.env.sh
-    echo 'export AXIOM_LEDGER_LOG_MODULE_CONSENSUS='info'' >>"${BUILD_PATH}"/node$i/.env.sh
+    echo 'export AXIOM_LEDGER_LOG_MODULE_CONSENSUS='debug'' >>"${BUILD_PATH}"/node$i/.env.sh
   done
 }
 
@@ -92,7 +94,7 @@ function recordNodesConfig() {
 
   for ((i = 1; i < N + 1; i = i + 1)); do
     nodeInfo=$("${BUILD_PATH}"/node${i}/axiom-ledger config node-info)
-    accountAddr=$(echo "$nodeInfo" |grep account-addr | awk {'print $2'})
+    accountAddr=$(echo "$nodeInfo" |grep node-key-addr | awk {'print $2'})
     p2pId=$(echo "$nodeInfo" |grep p2p-id | awk {'print $2'})
     echo "######## $i #####record#####$accountAddr"
     nodeName=$(echo "node$i" | base64)

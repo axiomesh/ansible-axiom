@@ -50,6 +50,15 @@ function clean(){
   done
 }
 
+function clean_consensus(){
+  for node in $CURRENT_PATH/*; do
+    if [[ $node == *"node"[0-9]* ]];then
+      echo "find dir: $node, execute rm -rf storage/consensus"
+      rm -rf  $node/storage/consensus
+    fi 
+  done
+}
+
 case "$1" in
   start)
     start
@@ -66,8 +75,11 @@ case "$1" in
   clean)
     clean
     ;;
+  clean_consensus)
+    clean_consensus
+    ;;
   *)
-    echo "Usage: ./control.sh {start|stop|restart|status}"
+    echo "Usage: ./control.sh {start|stop|restart|status|clean|clean_consensus}"
     exit 1
 esac
 

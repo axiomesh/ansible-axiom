@@ -4,8 +4,8 @@
 172.16.13.132
 [test3]
 172.16.13.132
-[test4]
-172.16.13.132
+[test85]
+172.16.30.85
 
 [chaos_test]
 172.16.30.81
@@ -14,6 +14,12 @@
 172.16.30.84
 
 [test1:vars]
+ansible_ssh_port=22
+ansible_ssh_user="hyperchain"
+ansible_ssh_pass="hyperchain"
+ansible_sudo_pass="hyperchain"
+
+[test85:vars]
 ansible_ssh_port=22
 ansible_ssh_user="hyperchain"
 ansible_ssh_pass="hyperchain"
